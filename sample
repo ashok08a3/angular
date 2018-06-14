@@ -213,3 +213,129 @@ module.exports = square;
 
 
 
+
+
+
+
+
+
+import {square , ash , diag ,chart1 } from './lib.js';
+//import * as square from './lib.js';
+//import * as ash from './lib.js';
+//import * as diag from './lib.js';
+
+
+const checkbox = document.getElementById('check').checked;
+ function firstchart() {
+    // if (checkbox != 'true') {
+        let ch2 = chart2;
+     //}else {
+      //   let ch1 =chart1;
+     //}
+ }
+//var myChart = new Chart(ctx,);
+
+
+//firstchart();
+
+
+
+console.log(checkbox);
+
+
+
+//var out = (square(9));
+let kum = ash + ash;
+
+const outvalue = document.getElementById('outvalue');
+const kumvalue =document.getElementById('kumvalue');
+const invalue = document.getElementById('invalue');
+
+outvalue.textContent = square(15);
+invalue.textContent = diag(7 ,9);
+kumvalue.textContent =kum;
+
+
+
+
+
+console.log(outvalue);
+console.log(kumvalue);
+console.log(invalue);
+
+
+//console.log(square(220));
+//console.log(diag(15 , 12));
+console.log(kum * kum);
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Import/Export</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+</head>
+
+<body>
+
+	<div id="app"></div>
+	<h1>This is HOME Page</h1>
+
+	<p id="outvalue"></p>
+	<p id="invalue"></p>
+	<p id="kumvalue"></p>
+
+	<canvas id="myChart" width="300" height="100"></canvas>
+	<canvas id="myChart1" width="300" height="100"></canvas>
+
+
+
+	<script type="module" src="module/app.js" ></script>
+
+
+	<input  id="check" type="checkbox" checked >
+
+
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+var express = require("express");
+var app     = express();
+app.use(express.static(__dirname + '/src'));
+/*
+app.get('/', function(req, res) {
+    res.sendFile(__dirname+"/index.html");
+});
+*/
+//import { square, diag, ash, chart1, createMyChart,createMyChartWithData } from './lib.js';
+//import {createMyChartWithData}  from '/lib';
+
+
+import square from '/lib';
+//const chart1 = createMyChartWithData('myChart1', data);
+
+console.log(square(10));
+
+app.listen(8080);
+
+
+
+
